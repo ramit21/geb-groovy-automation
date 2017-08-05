@@ -1,0 +1,9 @@
+
+
+class WelcomePage {
+	
+	def func(){
+		
+	}
+
+}
