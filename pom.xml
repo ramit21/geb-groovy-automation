@@ -20,7 +20,7 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<java.version>1.7</java.version>
+		<java.version>1.8</java.version>
 	</properties>
 
 	<dependencies>
@@ -67,19 +67,18 @@
 		<dependency>
 			<groupId>org.codehaus.groovy</groupId>
 			<artifactId>groovy-all</artifactId>
-		<!-- 	<version>2.4.3</version> -->
+			<version>2.3.10</version>
+			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.8.1</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.spockframework</groupId>
 			<artifactId>spock-core</artifactId>
-	<!-- 		<version>1.0-groovy-2.4</version>
- -->			<scope>test</scope>
+			<scope>test</scope>
 			<exclusions>
 				<exclusion>
 					<groupId>org.codehaus.groovy</groupId>
@@ -87,6 +86,7 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
+		
 		<dependency>
 			<groupId>org.gebish</groupId>
 			<artifactId>geb-spock</artifactId>
@@ -101,10 +101,12 @@
 		</dependency>
 		<!-- Geb dependencies end -->
 
+
 	</dependencies>
 
 	<build>
-		<pluginManagement> <!-- w/o this tag pom is showing error that plugin not covered in execution lifecycle -->
+		<pluginManagement> <!-- w/o this tag pom is showing error that plugin not covered in execution 
+				lifecycle -->
 			<plugins>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
@@ -112,7 +114,7 @@
 					<version>2.18.1</version>
 					<configuration>
 						<includes>
-							<include>*Spec.*</include>
+							<include>**/*Spec.groovy</include>
 						</includes>
 						<systemPropertyVariables>
 							<geb.build.baseUrl>http://google.com/ncr</geb.build.baseUrl>
