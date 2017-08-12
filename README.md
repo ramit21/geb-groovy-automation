@@ -1,12 +1,13 @@
 # geb-groovy-automation
 Automation testing using Geb
 
-Steps to run:
-1. Start the Springboot server.
+Steps to run the poc:
+1. Start the application as a server.
 2. run 'mvn test'
 
 
 What is Geb?
+
 
 Geb is a developer focused tool for automating the interaction between web browsers and web content. 
 It uses the dynamic language features of Groovy to provide a powerful content definition DSL (for modelling content for reuse) 
@@ -14,6 +15,8 @@ and key concepts from jQuery to provide a powerful content inspection and traver
 
 
 What is a SPOC?
+
+
 Spock is a testing and specification framework for Java and Groovy applications. 
 What makes it stand out from the crowd is its beautiful and highly expressive specification language. 
 Thanks to its JUnit runner, Spock is compatible with most IDEs, build tools, and continuous integration servers. 
@@ -37,7 +40,7 @@ Pom configurations: https://blog.jdriven.com/2015/04/geb-gems-running-geb-spock-
 Steps to configure Geb with maven based application application in eclipse: 
 
 1) Add following dependencies in your pom:
-	Groovy, JUnit, Spock core, Geb-spock and Selenium Chrome driver.
+	Groovy, JUnit, Spock core, Geb-spock and Selenium IE driver.
 
 2) Configure the GMaven plugin in your pom to compile all the groovy files.
 
@@ -45,9 +48,14 @@ Steps to configure Geb with maven based application application in eclipse:
 
 4) Install groovy plugin into your eclipse: Groovy/Grails Tool Suite (GTSS) 
 
-5) In eclipse, configure the maven project as a groovy project. (remove groovy libraries from classpath if server is not starting. keep the DSL groovy libraries though).
+5) In eclipse, configure the maven project as a groovy project. (remove groovy libraries from classpath if server is not starting. 
+	Keep the DSL groovy libraries though).
 
 6) Make sure that path of groovy files (/test/groovy) is correctly configured in Java build path, and in the Groovy Compiler settings.
 The output folder for /test/groovy should be gebpoc/target/test-classe as in the screenshot (java build path.jpg)
+
+7) The sceurity settings should be same on IE for all options in Tools -> Security.
+
+8) Launch the test suite: mvn test
 
 
