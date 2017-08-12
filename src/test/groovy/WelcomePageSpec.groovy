@@ -1,4 +1,6 @@
 import AbstractGebSpec
+import org.junit.Assert
+
 import spec.AbstractGebSpec.*
 import spock.lang.Stepwise
 
@@ -10,7 +12,7 @@ class WelcomePageSpec extends AbstractGebSpec{
 			to WelcomePage
  
 		then:
-			1==1
+			header.text().equals(("Welcome to spring boot"))
  
 	
 	}
