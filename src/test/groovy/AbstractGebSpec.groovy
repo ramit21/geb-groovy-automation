@@ -9,7 +9,7 @@ abstract class AbstractGebSpec extends GebSpec {
 	static def cachedDriver // static variable will store our single driver instance
 	
 	   def setupSpec() {
-		   if ( cachedDriver == null) { 
+		   if (cachedDriver == null) { 
 			  /* System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
 			   cachedDriver = new ChromeDriver() */
 			   DesiredCapabilities caps = DesiredCapabilities.internetExplorer();
@@ -24,7 +24,4 @@ abstract class AbstractGebSpec extends GebSpec {
 		   driver = cachedDriver   // each test should use our cached browser instance
 	   }
 	  
-	  def cleanup(){
-		  driver.quit();
-	  }
 }

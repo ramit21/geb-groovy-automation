@@ -25,8 +25,6 @@ class WelcomePageSpec extends AbstractGebSpec{
 			WebElement element = driver.findElement(By.id("reserve"));
 			JavascriptExecutor executor = (JavascriptExecutor)driver;
 			executor.executeScript("arguments[0].click();", element);
-			
-			sleep(1000l)
 		
 		then: "Reservation page is opened"
 			waitFor{ $("h1") }.text().equals("Calling Spring boot controllers via ajax")
