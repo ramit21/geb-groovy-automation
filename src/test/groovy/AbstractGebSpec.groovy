@@ -16,11 +16,15 @@ abstract class AbstractGebSpec extends GebSpec {
 			   caps.setCapability("ignoreZoomSetting", true);
 			   System.setProperty("webdriver.ie.driver", "src/test/resources/IEDriverServer.exe");
 			   cachedDriver = new InternetExplorerDriver(caps)
-			   //cachedDriver.get("http://www.yahoo.com");
+			   //cachedDriver.get("http://www.yahoo.com"); this will open yahoo.com as a test
 		   }
 	   }
 	
 	  def setup() {
 		   driver = cachedDriver   // each test should use our cached browser instance
 	   }
+	  
+	  def cleanup(){
+		  driver.quit();
+	  }
 }

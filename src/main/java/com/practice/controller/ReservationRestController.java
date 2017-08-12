@@ -34,6 +34,7 @@ public class ReservationRestController {
 
 	@RequestMapping(value = "/")
 	public String welcome(Model model) {
+		System.out.println("On reservation page");
 		return "reservation";
 	}
 	

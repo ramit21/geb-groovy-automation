@@ -6,5 +6,6 @@ class WelcomePage extends Page {
 	static at = { title == "Welcome page" }
 	static content = {
 		header {$("h1")}
+		reservationLink {$("a", id : "reserve")}
 	}
 }
