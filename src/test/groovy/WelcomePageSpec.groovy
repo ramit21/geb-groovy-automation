@@ -1,5 +1,6 @@
+import AbstractGebSpec
 import spec.AbstractGebSpec.*
-import spock.lang.Stepwise;
+import spock.lang.Stepwise
 
 @Stepwise
 class WelcomePageSpec extends AbstractGebSpec{

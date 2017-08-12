@@ -45,11 +45,9 @@ Steps to configure Geb with maven based application application in eclipse:
 
 4) Install groovy plugin into your eclipse: Groovy/Grails Tool Suite (GTSS) 
 
-5) In eclipse, configure the maven project as a groovy project as well
+5) In eclipse, configure the maven project as a groovy project. (remove groovy libraries from classpath if server is not starting. keep the DSL groovy libraries though).
 
-6) Make sure that path of groovy files (/test/resources) is correctly configured in Java build path, and the Groovy Compiler settings
+6) Make sure that path of groovy files (/test/groovy) is correctly configured in Java build path, and in the Groovy Compiler settings.
+The output folder for /test/groovy should be gebpoc/target/test-classe as in the screenshot (java build path.jpg)
 
-
-
-Issues: eclipse not picking up spec, server not starting, revisit geb driver configurations
 
