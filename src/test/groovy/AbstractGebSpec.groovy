@@ -16,7 +16,7 @@ abstract class AbstractGebSpec extends GebSpec {
 			   caps.setCapability("ignoreZoomSetting", true);
 			   System.setProperty("webdriver.ie.driver", "src/test/resources/IEDriverServer.exe");
 			   cachedDriver = new InternetExplorerDriver(caps)
-			   cachedDriver.get("http://www.yahoo.com");
+			   //cachedDriver.get("http://www.yahoo.com");
 		   }
 	   }
 	
