@@ -54,7 +54,7 @@ Steps to configure Geb with maven based application application in eclipse:
 6) Make sure that path of groovy files (/test/groovy) is correctly configured in Java build path, and in the Groovy Compiler settings.
 The output folder for /test/groovy should be gebpoc/target/test-classe as in the screenshot (java build path.jpg)
 
-7) The sceurity settings should be same on IE for all options in Tools -> Security.
+7) The security settings should be same on IE for all options in Tools -> Security.
 
 8) Launch the test suite: mvn test
 
